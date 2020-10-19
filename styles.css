@@ -1,0 +1,50 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  background: rgb(110,194,193);
+  background: url('./imgs/illustration01.png')no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+} */
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 500px;
+}
+
+.container-info h2 {
+  color: #e1e1e6;
+  font-weight: 900;
+}
+
+.container-info p {
+  font-size: 17px;
+  color: #e1e1e6;
+}
+
+/* Quiz */
+.quiz {
+  background: rgb(33,37,41);
+  background: linear-gradient(183deg, rgba(33,37,41,1) 0%, rgba(40,46,52,1) 52%);
+}
+
+.container h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
