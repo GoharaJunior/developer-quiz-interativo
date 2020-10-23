@@ -1,31 +1,40 @@
 const form = document.querySelector('.quiz-form')
-const finalResult = document.querySelector('.result')
+const finalScoreContainer = document.querySelector('.final-score-container')
 
-const correctAnswers = ['B', 'B', 'B', 'B']
+const correctAnswers = ['D', 'B', 'C', 'A']
 
-form.addEventListener('submit', event => {
-  event.preventDefault()
+let score = 0
 
-  let score = 0
+const getUserAnswers = () => {
+  let userAnswers = []
 
-  const userAnswers = [
-    form.inputQuestion1.value,
-    form.inputQuestion2.value,
-    form.inputQuestion3.value,
-    form.inputQuestion4.value,
-  ]
+  correctAnswers.forEach((_, index) => {
+    const userAnwswer = form[`inputQuestion${index + 1}`].value
+    userAnswers.push(userAnwswer)
+  })
 
+  return userAnswers
+}
+
+const calculeteUserScore = userAnswers => {
   userAnswers.forEach((userAnswer, index) => {
-    if (userAnswer === correctAnswers[index]) {
+    const isUserAnswerCorrect = userAnswer === correctAnswers[index]
+    if (isUserAnswerCorrect) {
       score += 25
     }
   })
+}
 
-  scrollTo(0, 0)
+const showFinalScore = () => {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })  
+  finalScoreContainer.classList.remove('d-none')
+}
 
-
-  finalResult.classList.remove('d-none')
-  
+const animateFinalScore = () => {
   let counter = 0
   
   const timer = setInterval(() => {
@@ -33,7 +42,26 @@ form.addEventListener('submit', event => {
       clearInterval(timer)
     }
 
-    finalResult.querySelector('span').textContent = `${counter}%`
-    counter++
-  }, 10)
+    finalScoreContainer.querySelector('span').textContent = `${counter++}%`
+  }, 10)  
+}
+ 
+form.addEventListener('submit', event => {
+  event.preventDefault()
+
+  // Obtém as respostas do usuário
+  const userAnswers = getUserAnswers()
+
+  // Calcula a pontuação do usuário
+  calculeteUserScore(userAnswers)
+
+  // Exibe a pontuação final
+  showFinalScore()
+
+  // Anima a pontuação final
+  animateFinalScore()
 })
+
+
+
+

@@ -32,17 +32,14 @@
         </div>
       </div>
     </section>
-
     <!-- Exibição dos pontos -->
-    <div class="result py-4 d-none bg-light text-center">
+    <div class="final-score-container py-4 d-none bg-light text-center">
       <div class="container lead">
         <p>Você acertou<span class="text-primary display-4 p-3">0%</span>
           do quiz!
         </p>
       </div>
     </div>
-
-
     <!-- Quiz -->
     <section class="quiz py-4">
       <div class="container">
@@ -50,6 +47,7 @@
           Vamos ver se os seus conhecimentos então em dia ?
         </h2>
         <form class="quiz-form text-light"">
+          <!-- Pergunta-01 -->
           <div class="my-5">
             <p class="lead font-weight-normal ">
               1. O que "console.log()" faz ?
@@ -63,7 +61,19 @@
             <div class="form-check my-2 text-white-50">
               <label for="" class="form-check-label">
                 <input type="radio" name="inputQuestion1" value="B">
-                É uma função que imprime um texto no console.
+                É uma função que concatena string.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion1" value="C">
+                É uma função usada para converter valores.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion1" value="D">
+                Exibe uma mensagem na console do navegador.
               </label>
             </div>
           </div>
@@ -83,6 +93,18 @@
                 Vai fatiar, pegar um pedaço de uma String
               </label>
             </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion2" value="C">
+                Vai atribuir valor a uma variável.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion2" value="D">
+                Vai fatiar e concatenar string.
+              </label>
+            </div>
           </div>
           <div class="my-5">
             <p class="lead font-weight-normal ">
@@ -96,8 +118,20 @@
             </div>
             <div class="form-check my-2 text-white-50">
               <label for="" class="form-check-label">
-                <input type="radio" name="inputQuestion3" value="B" >
+                <input type="radio" name="inputQuestion3" value="B">
+                Vai converter explicitamente uma string em number.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion3" value="C">
                 Vai substitui um caracter de uma String por outro
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion3" value="D" >
+                Analisa um argumento string e retorna um número de ponto flutuante.
               </label>
             </div>
           </div>
@@ -108,13 +142,25 @@
             <div class="form-check my-2 text-white-50">
               <label for="" class="form-check-label">
                 <input type="radio" name="inputQuestion4" value="A" checked>
-                Encontra a posição do carácter que você especificar dentro dos parênteses
+                Obtem o index da última ocorrência do caracter que foi passado por argumento.
               </label>
             </div>
             <div class="form-check my-2 text-white-50">
               <label for="" class="form-check-label">
                 <input type="radio" name="inputQuestion4" value="B">
-                Obtem o index da última ocorrência do caracter que foi passado por argumento.
+                Encontra a posição do carácter que você especificar dentro dos parênteses.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion4" value="C">
+                determina se o valor transmitido é um número finito.
+              </label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <label for="" class="form-check-label">
+                <input type="radio" name="inputQuestion4" value="D">
+                Determina se o valor é NaN ou não.
               </label>
             </div>
           </div>
